@@ -2,9 +2,9 @@
 using namespace std;
 
 inline void done() {
-    auto fun=[&](string s) {
+    auto fun = [&](string s) {
         int64_t r = {};
-        for(char c : s) {
+        for (char c : s) {
             r += (c - '0');
         }
         return r;
@@ -12,13 +12,13 @@ inline void done() {
     string n;
     cin >> n;
     int64_t r = fun(n);
-    for(int i = {}; i < (int)n.size(); ++i) {
-        if(n[i] == '0') {
+    for (int i = {}; i < (int)n.size(); ++i) {
+        if (n[i] == '0') {
             continue;
         }
         string cur = n;
         cur[i]--;
-        for(int j = i + 1; j < (int)cur.size(); ++j) {
+        for (int j = i + 1; j < (int)cur.size(); ++j) {
             cur[j] = '9';
         }
         r = max(r, fun(cur));
