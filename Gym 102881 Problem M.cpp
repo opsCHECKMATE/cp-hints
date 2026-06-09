@@ -1,13 +1,15 @@
 #include <bits/stdc++.h>
 using namespace std;
 /*
-problem : https://codeforces.com/gym/102881/problem/M
+Problem : https://codeforces.com/gym/102881/problem/M
 
-The code was modified to the correct solution by using prefix sum 
-reducing the time complexity form O(n^2) to O(n) and avoiding recalculating the digit sum for every candidate number
+Note :
+The code was modified to the correct solution by using prefix sum,
+reducing the time complexity form O(n^2) to O(n) and avoiding recalculating the digit sum for every candidate number.
 */
 inline void done() {
-    string n = "99";   /*cin >> n*/;
+    string n;   
+    cin >> n;
     int64_t s = {};
     for (char c : n) {
         s += c - '0';
@@ -28,6 +30,7 @@ inline void done() {
 
 int32_t main() {
     // file
+    freopen("lis.in", "r", stdin);
     cin.tie(0)->sync_with_stdio(0);
 
     done();
